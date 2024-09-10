@@ -28,10 +28,11 @@ header p {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Changed from inline to inline-block for better spacing control */
     margin: 0 10px;
 }
 
@@ -45,7 +46,8 @@ nav ul li a:hover {
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Changed from fixed width to percentage for better responsiveness */
+    max-width: 1200px; /* Limit the maximum width to prevent stretching on very large screens */
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -94,4 +96,62 @@ footer {
     position: relative; /* Changed position to relative */
     width: 100%;
     bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%; /* Adjust width for medium-sized screens */
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        text-align: center; /* Center navigation links on medium screens */
+    }
+    
+    nav ul li {
+        display: block; /* Stack navigation items vertically on smaller screens */
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Adjust header padding */
+    }
+    
+    .container {
+        width: 95%; /* Further adjust container width for smaller screens */
+    }
+
+    form button {
+        padding: 8px;
+        font-size: 14px; /* Adjust button size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0; /* Further reduce header padding */
+    }
+
+    .container {
+        width: 100%; /* Full width container on very small screens */
+        padding: 10px;
+        padding-bottom: 60px; /* Adjust bottom padding */
+    }
+
+    form button {
+        padding: 6px;
+        font-size: 12px; /* Smaller button size */
+    }
+
+    footer {
+        padding: 8px; /* Adjust footer padding for smaller screens */
+    }
 }
