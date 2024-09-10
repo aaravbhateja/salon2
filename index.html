@@ -3,10 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book an Appointment - Modern Beauty Zone</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Modern Beauty Zone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .service img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .service h3 {
+            margin-top: 10px;
+        }
+        .contact {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .contact h2 {
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            background: #5cb85c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background: #4cae4c;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Modern Beauty Zone</h1>
-        <p>Plot No 75, Babuji Building, A
+        <p>Plot No 75, Babuji Building, APMC Main Road, Sanameshwar Nagar, Belgaum 590010</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="book.html">Book Appointment</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="services">
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Threading" alt="Threading">
+                <h3>Threading</h3>
+                <p>Eyebrows, Upper Lip, Forehead, Side Look, Full Face, Chin</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Waxing" alt="Waxing">
+                <h3>Waxing</h3>
+                <p>Full Arms, Half Arms, Full Legs, Half Legs, Under Arms, Stomach, Back, Front</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Manicure+%26+Pedicure" alt="Manicure & Pedicure">
+                <h3>Manicure & Pedicure</h3>
+                <p>Normal Manicure, Spa Manicure, Polish Manicure, Normal Pedicure, Spa Pedicure, Polishing Pedicure</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Cut" alt="Hair Cut">
+                <h3>Hair Cut</h3>
+                <p>Boy Cut, Bob Cut, Layer Cut, U Cut, V Cut, Deep U Cut, Feather Cut, Straight Cut, Butterfly Cut</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Treatment" alt="Hair Treatment">
+                <h3>Hair Treatment</h3>
+                <p>Smoothning, Rebonding, Straightening, Keratin, Botox, Nano Plastia, Fiber Plex, Metal DX</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Makeup" alt="Makeup">
+                <h3>Makeup</h3>
+                <p>Light Makeup, Party Makeup, Bridal Makeup, Saree Draping</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Colours" alt="Hair Colours">
+                <h3>Hair Colours</h3>
+                <p>Short Length, Mid Length, Full Length, Rude Touchup</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Massage+Therapy" alt="Massage Therapy">
+                <h3>Massage Therapy</h3>
+                <p>Relax and rejuvenate with our therapeutic massages.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Extensions" alt="Hair Extensions">
+                <h3>Hair Extensions</h3>
+                <p>Add length and volume to your hair with our extensions.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Nail+Art" alt="Nail Art">
+                <h3>Nail Art</h3>
+                <p>Express your style with our creative nail designs.</p>
+            </div>
+        </div>
+
+  
