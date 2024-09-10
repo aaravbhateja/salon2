@@ -1,217 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salon Name</title>
-  <style>
-    /* Reset and base styles */
-    body, h1, h2, h3, p, ul, li, a, form {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    /* Header styles */
-    header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    nav ul li {
-      margin: 0;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    /* Hero section styles */
-    .hero {
-      position: relative;
-      text-align: center;
-    }
-
-    .hero img {
-      width: 100%;
-      height: auto;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-    }
-
-    .hero-text h2 {
-      font-size: 2.5em;
-    }
-
-    .btn {
-      background: #ff6347;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    /* Services section styles */
-    .services {
-      padding: 20px 0;
-    }
-
-    .service {
-      margin-bottom: 20px;
-    }
-
-    .service h3 {
-      margin-bottom: 10px;
-    }
-
-    /* Contact section styles */
-    .contact {
-      padding: 20px 0;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    form label {
-      margin-bottom: 5px;
-    }
-
-    form input, form textarea {
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    form button {
-      background: #ff6347;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #e5533c;
-    }
-
-    /* Footer styles */
-    footer {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Beauty Zone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .service img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .service h3 {
+            margin-top: 10px;
+        }
+        .contact {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .contact h2 {
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            background: #5cb85c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background: #4cae4c;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Salon Name</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <section id="home" class="hero">
-    <img src="images/salon.jpg" alt="Salon Interior">
-    <div class="hero-text">
-      <h2>Welcome to Salon Name</h2>
-      <p>Transforming your look and feel.</p>
-      <a href="#contact" class="btn">Book an Appointment</a>
-    </div>
-  </section>
-  
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service">
-        <h3>Haircut</h3>
-        <p>Stylish and trendy haircuts tailored to your preferences.</p>
-        <p>Price: $30</p>
-      </div>
-      <div class="service">
-        <h3>Coloring</h3>
-        <p>Beautiful color treatments for a fresh new look.</p>
-        <p>Price: $60</p>
-      </div>
-      <!-- Add more services as needed -->
-    </div>
-  </section>
-  
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send Message</button>
-      </form>
-      <div id="responseMessage"></div>
-    </div>
-  </section>
 
-  <footer>
+    <header>
+        <h1>Modern Beauty Zone</h1>
+        <p>Plot No 75, Babuji Building, APMC Main Road, Sanameshwar Nagar, Belgaum 590010</p>
+    </header>
+
     <div class="container">
-      <p>&copy; 2024 Salon Name</p>
+        <div class="services">
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Threading" alt="Threading">
+                <h3>Threading</h3>
+                <p>Eyebrows, Upper Lip, Forehead, Side Look, Full Face, Chin</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Waxing" alt="Waxing">
+                <h3>Waxing</h3>
+                <p>Full Arms, Half Arms, Full Legs, Half Legs, Under Arms, Stomach, Back, Front</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Manicure+%26+Pedicure" alt="Manicure & Pedicure">
+                <h3>Manicure & Pedicure</h3>
+                <p>Normal Manicure, Spa Manicure, Polish Manicure, Normal Pedicure, Spa Pedicure, Polishing Pedicure</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Cut" alt="Hair Cut">
+                <h3>Hair Cut</h3>
+                <p>Boy Cut, Bob Cut, Layer Cut, U Cut, V Cut, Deep U Cut, Feather Cut, Straight Cut, Butterfly Cut</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Treatment" alt="Hair Treatment">
+                <h3>Hair Treatment</h3>
+                <p>Smoothning, Rebonding, Straightening, Keratin, Botox, Nano Plastia, Fiber Plex, Metal DX</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Makeup" alt="Makeup">
+                <h3>Makeup</h3>
+                <p>Light Makeup, Party Makeup, Bridal Makeup, Saree Draping</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Colours" alt="Hair Colours">
+                <h3>Hair Colours</h3>
+                <p>Short Length, Mid Length, Full Length, Rude Touchup</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Massage+Therapy" alt="Massage Therapy">
+                <h3>Massage Therapy</h3>
+                <p>Relax and rejuvenate with our therapeutic massages.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Extensions" alt="Hair Extensions">
+                <h3>Hair Extensions</h3>
+                <p>Add length and volume to your hair with our extensions.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200?text=Nail+Art" alt="Nail Art">
+                <h3>Nail Art</h3>
+                <p>Express your style with our creative nail designs.</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Phone:</strong> 8050022309</p>
+            <p><strong>Email:</strong> <a href="mailto:modernbeautyzone00@gmail.com">modernbeautyzone00@gmail.com</a></p>
+            <a href="https://wa.me/8050022309" class="button" target="_blank">Book Appointment on WhatsApp</a>
+        </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting the traditional way
+    <footer>
+        <p>&copy; 2024 Modern Beauty Zone. All Rights Reserved.</p>
+    </footer>
 
-      // Simple form validation
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      
-      if (name && email && message) {
-        document.getElementById('responseMessage').innerHTML = '<p>Thank you for your message!</p>';
-        // Here, you would normally send the data to a server
-      } else {
-        document.getElementById('responseMessage').innerHTML = '<p>Please fill out all fields.</p>';
-      }
-    });
-  </script>
+    <script>
+        // Optional JavaScript can be added here
+    </script>
+
 </body>
 </html>
