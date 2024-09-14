@@ -20,32 +20,33 @@
             color: #fff;
             padding: 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            text-align: center;
         }
         header .logo {
-            flex: 0 0 auto;
-            margin-left: 20px;
+            margin-bottom: 10px;
         }
         header .logo img {
-            width: 100px; /* Adjust the size as needed */
-            height: 100px; /* Maintain aspect ratio */
-            border-radius: 50%; /* Makes the logo circular */
-            object-fit: cover; /* Ensures the image covers the container */
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
         }
         header .info {
-            text-align: center;
-            flex: 1;
+            margin-bottom: 10px;
         }
         header h1 {
             margin: 0;
+            font-size: 24px;
         }
         header p {
             margin: 5px 0;
             font-size: 14px;
         }
         nav {
-            margin-top: 20px;
+            margin-top: 10px;
         }
         nav ul {
             list-style: none;
@@ -55,11 +56,12 @@
             justify-content: center;
         }
         nav ul li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-size: 16px;
         }
         nav ul li a:hover {
             text-decoration: underline;
@@ -68,7 +70,7 @@
             width: 80%;
             margin: 0 auto;
             padding: 20px;
-            padding-bottom: 80px; /* Adjust padding to ensure content doesn't overlap with footer */
+            padding-bottom: 80px;
             flex: 1;
         }
         .services {
@@ -95,6 +97,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
+            text-align: center;
         }
         .contact h2 {
             margin-top: 0;
@@ -119,6 +122,12 @@
             padding: 10px 0;
             width: 100%;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer .logo {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -126,7 +135,7 @@
 
     <header>
         <div class="logo">
-            <img src="jpeg-01-30.jpg" alt="Salon Logo"> <!-- Adjust the path and filename as needed -->
+            <img src="jpeg-01-30.jpg" alt="Salon Logo">
         </div>
         <div class="info">
             <h1>Modern Beauty Zone</h1>
@@ -206,12 +215,11 @@
     </div>
 
     <footer>
+        <div class="logo">
+            <img src="jpeg-01-30.jpg" alt="Salon Logo">
+        </div>
         <p>&copy; 2024 Modern Beauty Zone. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        // Optional JavaScript can be added here
-    </script>
 
 </body>
 </html>
