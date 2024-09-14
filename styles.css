@@ -1,157 +1,112 @@
-/* General Styles */
+/* Base Styles (Already Provided) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: #333;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    min-height: 100vh;
 }
 
 header {
-    background-color: #333;
+    background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 5px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block; /* Changed from inline to inline-block for better spacing control */
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+header img {
+    max-width: 120px; /* Adjust the size of the logo */
+    margin: 10px 0;
 }
 
 .container {
-    width: 90%; /* Changed from fixed width to percentage for better responsiveness */
-    max-width: 1200px; /* Limit the maximum width to prevent stretching on very large screens */
-    margin: 20px auto;
+    width: 80%;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-bottom: 80px; /* Added padding to the bottom */
+    padding-bottom: 80px; /* Adjust padding to ensure content doesn't overlap with footer */
+    flex: 1;
 }
 
-h2 {
-    color: #333;
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.service {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-form label {
-    margin: 10px 0 5px;
+.service img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.contact {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
-form button {
-    padding: 10px;
-    background-color: #333;
+.contact h2 {
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background: #5cb85c;
     color: #fff;
-    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-form button:hover {
-    background-color: #555;
+.button:hover {
+    background: #4cae4c;
 }
 
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: relative; /* Changed position to relative */
+    padding: 10px 0;
     width: 100%;
-    bottom: 0;
+    position: relative;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .container {
-        width: 95%; /* Adjust width for medium-sized screens */
-    }
-}
-
-@media (max-width: 992px) {
-    nav ul {
-        text-align: center; /* Center navigation links on medium screens */
-    }
-    
-    nav ul li {
-        display: block; /* Stack navigation items vertically on smaller screens */
-        margin: 10px 0;
-    }
-
-    .container {
-        width: 90%; /* Adjust container width for smaller screens */
-    }
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    header {
-        padding: 15px 0; /* Adjust header padding */
-    }
-    
     .container {
-        width: 95%; /* Further adjust container width for smaller screens */
+        width: 90%;
     }
 
-    form button {
-        padding: 8px;
-        font-size: 14px; /* Adjust button size for smaller screens */
+    header img {
+        max-width: 100px;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 10px 0; /* Further reduce header padding */
+    header img {
+        max-width: 80px;
     }
 
-    .container {
-        width: 100%; /* Full width container on very small screens */
-        padding: 10px;
-        padding-bottom: 60px; /* Adjust bottom padding */
+    .services {
+        grid-template-columns: 1fr;
     }
 
-    form button {
-        padding: 6px;
-        font-size: 12px; /* Smaller button size */
-    }
-
-    footer {
-        padding: 8px; /* Adjust footer padding for smaller screens */
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
