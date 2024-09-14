@@ -4,86 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Modern Beauty Zone</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        /* Adding internal CSS for the font styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
             background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
         header {
             background: #333;
             color: #fff;
-            padding: 15px;
+            padding: 20px 0;
             text-align: center;
         }
         header h1 {
-            margin: 10px 0;
-            font-size: 24px;
-            font-family: 'Pacifico', cursive; /* Matching font */
-            color: #fff;
+            margin: 0;
+            font-family: 'Pacifico', cursive;
+            font-size: 28px;
         }
         nav {
-            margin-top: 10px;
+            margin-top: 20px;
         }
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         nav ul li {
-            margin: 5px 0;
+            display: inline;
+            margin: 0 10px;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 14px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         .container {
-            width: 95%;
+            width: 80%;
             margin: 0 auto;
             padding: 20px;
-            padding-bottom: 80px;
-            flex: 1;
         }
         .container h2 {
-            font-family: 'Roboto', sans-serif; /* Matching font */
+            font-family: 'Roboto', sans-serif;
             font-weight: 700;
+        }
+        .container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .container li {
+            margin: 10px 0;
         }
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            width: 100%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Modern Beauty Zone</h1>
-        <p>Plot No 75, Babuji Building, APMC Main Road, Sanameshwar Nagar, Belgaum 590010</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -91,7 +76,6 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="location.html">Location</a></li>
                 <li><a href="book.html">Book Appointment</a></li>
-                <!-- Removed Signup and Login links -->
             </ul>
         </nav>
     </header>
