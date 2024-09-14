@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Beauty Zone</title>
     <style>
+        /* Mobile First Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,32 +19,22 @@
         header {
             background: #333;
             color: #fff;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
-        header .logo {
-            margin-bottom: 10px;
-        }
         header .logo img {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
         }
-        header .info {
-            margin-bottom: 10px;
-        }
         header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        header p {
-            margin: 5px 0;
-            font-size: 14px;
+            margin: 10px 0;
+            font-size: 16px;
         }
         nav {
             margin-top: 10px;
@@ -53,21 +44,19 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         nav ul li {
-            margin: 0 15px;
+            margin: 5px 0;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 16px;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
+            font-size: 14px;
         }
         .container {
-            width: 80%;
+            width: 95%;
             margin: 0 auto;
             padding: 20px;
             padding-bottom: 80px;
@@ -75,8 +64,8 @@
         }
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
         .service {
             background: #fff;
@@ -88,12 +77,9 @@
             width: 100%;
             border-radius: 8px;
         }
-        .service h3 {
-            margin-top: 10px;
-        }
         .contact {
             background: #fff;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
@@ -101,15 +87,16 @@
         }
         .contact h2 {
             margin-top: 0;
+            font-size: 18px;
         }
         .button {
             display: inline-block;
             background: #5cb85c;
             color: #fff;
-            padding: 10px 20px;
+            padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             margin-top: 10px;
         }
         .button:hover {
@@ -125,6 +112,50 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        /* Tablet and Larger Devices */
+        @media (min-width: 600px) {
+            header .logo img {
+                width: 80px;
+                height: 80px;
+            }
+            header h1 {
+                font-size: 18px;
+            }
+            nav ul {
+                flex-direction: row;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+            .container {
+                width: 90%;
+            }
+            .services {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        /* Desktop and Larger Devices */
+        @media (min-width: 992px) {
+            header .logo img {
+                width: 100px;
+                height: 100px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            nav ul {
+                flex-direction: row;
+            }
+            .container {
+                width: 80%;
+            }
         }
     </style>
 </head>
