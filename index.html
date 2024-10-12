@@ -3,54 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing Due Notification</title>
+    <title>Billing Reminder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .billing-container {
-            background-color: white;
-            border-radius: 10px;
+            background-color: #f9f9f9;
+            color: #333;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #ff4b4b;
+            color: #e74c3c;
         }
         p {
-            font-size: 18px;
-            color: #333;
+            line-height: 1.6;
         }
-        .pay-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .footer {
             margin-top: 20px;
-        }
-        .pay-btn:hover {
-            background-color: #218838;
+            font-size: 12px;
+            color: #777;
         }
     </style>
 </head>
 <body>
-
-    <div class="billing-container">
-        <h1>Billing Due</h1>
-        <p>Your payment is overdue. Kindly pay the bill to resume your services.</p>
-        <a href="#" class="pay-btn">Pay Now</a>
+    <div class="container">
+        <h1>Billing Due Reminder</h1>
+        <p>Dear Aarav Bhateja,</p>
+        <p>We hope this message finds you well. This is a friendly reminder that your billing payment is currently due. To ensure the continued availability of your services, we kindly ask you to clear your dues at your earliest convenience.</p>
+        <p>Outstanding Amount: <strong>$24</strong></p>
+        <p>Thank you for your attention to this matter. We appreciate your prompt action!</p>
+        <p>Sincerely,<br>Your Shopify Team</p>
+        <div class="footer">
+            <p>If you have any questions, feel free to contact Shopify support through their Help Center at <a href="https://help.shopify.com" target="_blank">help.shopify.com</a>.</p>
+        </div>
     </div>
-
 </body>
 </html>
