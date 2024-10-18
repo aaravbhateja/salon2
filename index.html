@@ -1,99 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing Reminder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #e74c3c;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #777;
-        }
-        .timer {
-            font-size: 18px;
-            color: #e74c3c;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 72px;
+      margin: 0;
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 10px 0 30px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #007acc;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #005f99;
+    }
+    .image {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Billing Due Reminder</h1>
-        <p>Dear Aarav Bhateja,</p>
-        <p>We hope this message finds you well. This is a friendly reminder that your billing payment is currently due. To ensure the continued availability of your services, we kindly ask you to clear your dues at your earliest convenience.</p>
-        <p>Outstanding Amount: <strong>$24</strong></p>
-        <p><b>Note:</b> Your website will be discontinued after: 
-            <span class="timer" id="timer">Loading...</span>
-        </p>
-        <p>Thank you for your attention to this matter. We appreciate your prompt action!</p>
-        <p>Sincerely,<br>Your Shopify Team</p>
-        <div class="footer">
-            <p>If you have any questions, feel free to contact Shopify support through their Help Center at <a href="https://help.shopify.com" target="_blank">help.shopify.com</a>.</p>
-        </div>
+  <div class="container">
+    <div class="image">
+      <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/empty-state.svg" alt="Page Not Found" width="150">
     </div>
-
-    <script>
-        // Set the start and end times
-        const startTime = new Date();
-        startTime.setHours(11, 25, 0, 0); // Start time: 11:25 AM today
-
-        const endTime = new Date(startTime.getTime() + 8 * 60 * 60 * 1000); // End time: 8 hours after start
-
-        function updateTimer() {
-            const now = new Date();
-            const timeLeft = endTime - now; // Calculate remaining time in milliseconds
-
-            if (timeLeft > 0) {
-                const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-                const seconds = Math.floor((timeLeft / 1000) % 60);
-
-                // Format the time as HH:MM:SS
-                const formattedTime = 
-                    String(hours).padStart(2, '0') + ':' + 
-                    String(minutes).padStart(2, '0') + ':' + 
-                    String(seconds).padStart(2, '0');
-
-                document.getElementById('timer').textContent = formattedTime;
-            } else {
-                document.getElementById('timer').textContent = "00:00:00";
-                clearInterval(timerInterval);
-                redirectTo404(); // Redirect when the timer ends
-            }
-        }
-
-        // Function to redirect to a 404 page
-        function redirectTo404() {
-            // Redirect to a 404 error page or show a custom "Website Discontinued" page
-            window.location.href = "/404.html"; // Replace with your custom 404 page path
-        }
-
-        // Update the timer every second
-        const timerInterval = setInterval(updateTimer, 1000);
-
-        // Start the timer immediately on load
-        updateTimer();
-    </script>
+    <h1>404</h1>
+    <p>Oops! The page you are looking for doesn't exist.</p>
+    <a href="/">Go Back Home</a>
+  </div>
 </body>
 </html>
