@@ -56,9 +56,9 @@
     <script>
         // Set the start and end times
         const startTime = new Date();
-        startTime.setHours(11, 25, 0, 0); // Set start time to 11:25 AM today
+        startTime.setHours(11, 25, 0, 0); // Start time: 11:25 AM today
 
-        const endTime = new Date(startTime.getTime() + 8 * 60 * 60 * 1000); // 8 hours after start time
+        const endTime = new Date(startTime.getTime() + 8 * 60 * 60 * 1000); // End time: 8 hours after start
 
         function updateTimer() {
             const now = new Date();
@@ -79,8 +79,14 @@
             } else {
                 document.getElementById('timer').textContent = "00:00:00";
                 clearInterval(timerInterval);
-                alert("Time's up! Your website will be discontinued.");
+                redirectTo404(); // Redirect when the timer ends
             }
+        }
+
+        // Function to redirect to a 404 page
+        function redirectTo404() {
+            // Redirect to a 404 error page or show a custom "Website Discontinued" page
+            window.location.href = "/404.html"; // Replace with your custom 404 page path
         }
 
         // Update the timer every second
