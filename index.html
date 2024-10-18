@@ -43,8 +43,8 @@
         <p>Dear Aarav Bhateja,</p>
         <p>We hope this message finds you well. This is a friendly reminder that your billing payment is currently due. To ensure the continued availability of your services, we kindly ask you to clear your dues at your earliest convenience.</p>
         <p>Outstanding Amount: <strong>$24</strong></p>
-        <p><b>Note: </b> Your website will be discontinued after: 
-            <span class="timer" id="timer">08:00:00</span>
+        <p><b>Note:</b> Your website will be discontinued after: 
+            <span class="timer" id="timer">Loading...</span>
         </p>
         <p>Thank you for your attention to this matter. We appreciate your prompt action!</p>
         <p>Sincerely,<br>Your Shopify Team</p>
@@ -54,34 +54,40 @@
     </div>
 
     <script>
-        // Set the total time in seconds (8 hours = 8 * 60 * 60)
-        let totalSeconds = 8 * 60 * 60;
+        // Set the start and end times
+        const startTime = new Date();
+        startTime.setHours(11, 25, 0, 0); // Set start time to 11:25 AM today
+
+        const endTime = new Date(startTime.getTime() + 8 * 60 * 60 * 1000); // 8 hours after start time
 
         function updateTimer() {
-            let hours = Math.floor(totalSeconds / 3600);
-            let minutes = Math.floor((totalSeconds % 3600) / 60);
-            let seconds = totalSeconds % 60;
+            const now = new Date();
+            const timeLeft = endTime - now; // Calculate remaining time in milliseconds
 
-            // Format the time as HH:MM:SS
-            let formattedTime = 
-                String(hours).padStart(2, '0') + ':' + 
-                String(minutes).padStart(2, '0') + ':' + 
-                String(seconds).padStart(2, '0');
+            if (timeLeft > 0) {
+                const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+                const seconds = Math.floor((timeLeft / 1000) % 60);
 
-            // Update the timer display
-            document.getElementById('timer').textContent = formattedTime;
+                // Format the time as HH:MM:SS
+                const formattedTime = 
+                    String(hours).padStart(2, '0') + ':' + 
+                    String(minutes).padStart(2, '0') + ':' + 
+                    String(seconds).padStart(2, '0');
 
-            // Stop the timer at 00:00:00
-            if (totalSeconds > 0) {
-                totalSeconds--;
+                document.getElementById('timer').textContent = formattedTime;
             } else {
+                document.getElementById('timer').textContent = "00:00:00";
                 clearInterval(timerInterval);
                 alert("Time's up! Your website will be discontinued.");
             }
         }
 
-        // Call updateTimer every second
-        let timerInterval = setInterval(updateTimer, 1000);
+        // Update the timer every second
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // Start the timer immediately on load
+        updateTimer();
     </script>
 </body>
 </html>
